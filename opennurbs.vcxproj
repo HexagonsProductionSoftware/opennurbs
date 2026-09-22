@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <PackageReference Include="Hexagon.ZLib" />
+    <PackageReference Include="Hexagon.ZLib" Version= "1.3.1.29"/>
   </ItemGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -42,18 +42,18 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\CommonProjectsOptions\EmkCommon.props" />
-    <Import Project="..\CommonProjectsOptions\EMKCommonReleaseX64.props" />
+    <Import Project="CommonProjectsOptions\EmkCommon.props" />
+    <Import Project="CommonProjectsOptions\EMKCommonReleaseX64.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnoptimized|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\CommonProjectsOptions\EmkCommon.props" />
-    <Import Project="..\CommonProjectsOptions\EMKCommonReleaseUnoptimized.props" />
+    <Import Project="CommonProjectsOptions\EmkCommon.props" />
+    <Import Project="CommonProjectsOptions\EMKCommonReleaseUnoptimized.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\CommonProjectsOptions\EmkCommon.props" />
-    <Import Project="..\CommonProjectsOptions\EmkCommonDebug.props" />
+    <Import Project="CommonProjectsOptions\EmkCommon.props" />
+    <Import Project="CommonProjectsOptions\EmkCommonDebug.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
