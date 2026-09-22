@@ -71,11 +71,7 @@
 
 #endif
 
-
-
 #include "opennurbs.h"
-
-
 
 // CHECK SETTINGS AFTER EVERTHING IS INCLUDED
 

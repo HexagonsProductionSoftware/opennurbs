@@ -352,6 +352,15 @@ void ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, int value)
   }
 }
 
+// 17-11-2005 Luigi
+// Ho aggiunto questa perchè non ho niente per cambiare direttamente il campo privato
+// con la versione di ON dentro un archivio ON
+void Exported_ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, int value)
+{
+  ON_SetBinaryArchiveOpenNURBSVersion(file, value);
+}
+
+
 ON_BOOL32 ON_3dmProperties::Read(ON_BinaryArchive& file )
 {
   Default();

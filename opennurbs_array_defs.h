@@ -454,6 +454,9 @@ int ON_SimpleArray<T>::BinarySearch( const T* key, int (*compar)(const T*,const 
 
 }
 
+ON_DECL
+void ON_hsort(void* base, size_t count, size_t sizeof_element, int (*compare)(const void*, const void*));
+
 template <class T>
 bool ON_SimpleArray<T>::HeapSort( int (*compar)(const T*,const T*) )
 {

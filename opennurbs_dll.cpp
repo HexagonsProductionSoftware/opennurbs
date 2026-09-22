@@ -35,25 +35,30 @@ ON_BOOL32 APIENTRY DllMain( HANDLE hModule,
   switch( ul_reason_for_call ) {
 
   case DLL_PROCESS_ATTACH:
-    ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_PROCESS_ATTACH\n");
+    // LG - No use for Esprit
+    // ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_PROCESS_ATTACH\n");
     ON_ClassId::IncrementMark(); // make sure each DLL that each process that 
                                  // uses OpenNURBS has a unique mark.
     break;
 
   case DLL_THREAD_ATTACH:
-    ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_THREAD_ATTACH\n");
+     // LG - No use for Esprit
+    // ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_THREAD_ATTACH\n");
     break;
 
   case DLL_THREAD_DETACH:
-    ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_THREAD_DETACH\n");
+     // LG - No use for Esprit
+    // ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_THREAD_DETACH\n");
     break;
 
   case DLL_PROCESS_DETACH:
-    ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_PROCESS_DETACH\n");
+     // LG - No use for Esprit
+    //::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = DLL_PROCESS_DETACH\n");
     break;
 
   default:
-    ::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = ?\n");
+     // LG - No use for Esprit
+    //::OutputDebugStringA("OpenNURBS DllMain() ul_reason_for_call = ?\n");
     break;
   }
 

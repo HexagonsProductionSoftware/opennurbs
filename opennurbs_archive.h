@@ -148,6 +148,12 @@ class ON_BinaryArchive;
 // Do not call directly. 
 void ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive&,int);
 
+// 17-11-2005 Luigi
+// Ho aggiunto questa perchè non ho niente per cambiare direttamente il campo privato
+// con la versione di ON dentro un archivio ON
+// Implementata in opennurbs_3dm_properties.cpp
+void ON_DECL Exported_ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, int value);
+
 class ON_CLASS ON_BinaryArchive // use for generic serialization of binary data
 {
 public:

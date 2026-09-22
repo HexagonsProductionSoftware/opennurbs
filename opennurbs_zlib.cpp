@@ -26,20 +26,22 @@
 
 #if defined(NDEBUG)
 
+#if defined(NDEBUG)
+
 // release x64 libs
 #if defined(ON_PURIFY_BUILD)
-#pragma comment(lib, "./zlib/x64/ReleasePurify/zlibx64.lib")
+// #pragma comment(lib, "./zlib/x64/ReleasePurify/zlib.lib")
 #else
-#pragma comment(lib, "./zlib/x64/Release/zlibx64.lib")
+//#pragma comment(lib, "./zlib/x64/Release/zlib.lib")
 #endif
 
 #else // _DEBUG
 
 // debug  x64 libs
 #if defined(ON_PURIFY_BUILD)
-#pragma comment(lib, "./zlib/x64/DebugPurify/zlibx64_d.lib")
+// #pragma comment(lib, "./zlib/x64/DebugPurify/zlib.lib")
 #else
-#pragma comment(lib, "./zlib/x64/Debug/zlibx64_d.lib")
+// #pragma comment(lib, "./zlib/x64/Debug/zlib.lib")
 #endif
 
 #endif // if NDEBUG else _DEBUG
@@ -52,20 +54,21 @@
 
 // release 32 bit WIndows libs
 #if defined(ON_PURIFY_BUILD)
-#pragma comment(lib, "./zlib/ReleasePurify/zlib.lib")
+#pragma comment(lib, "./zlib/Win32/ReleasePurify/zlib.lib")
 #else
-#pragma comment(lib, "./zlib/Release/zlib.lib")
+#pragma comment(lib, "./zlib/Win32/Release/zlib.lib")
 #endif
 
 #else // _DEBUG
 
 // debug 32 bit WIndows libs
 #if defined(ON_PURIFY_BUILD)
-#pragma comment(lib, "./zlib/DebugPurify/zlib_d.lib")
+#pragma comment(lib, "./zlib/Win32/DebugPurify/zlib.lib")
 #else
-#pragma comment(lib, "./zlib/Debug/zlib_d.lib")
+#pragma comment(lib, "./zlib/Win32/Debug/zlib.lib")
 #endif
 
+#endif // if NDEBUG else _DEBUG
 #endif // if NDEBUG else _DEBUG
 
 #endif // if WIN64 else WIN32
@@ -293,7 +296,7 @@ size_t ON_BinaryArchive::WriteDeflate( // returns number of bytes written
       // no uncompressed input is left - switch to finish mode
       flush = Z_FINISH;
     }
-    zrc = z_deflate( &m_zlib.strm, flush ); 
+    zrc = deflate( &m_zlib.strm, flush ); 
     if ( zrc < 0 ) 
     {
       // Something went haywire - bail out.
@@ -491,7 +494,7 @@ bool ON_BinaryArchive::ReadInflate(
       // no compressed input is left - switch to finish mode
       flush = Z_FINISH;
     }
-    zrc = z_inflate( &m_zlib.strm, flush );
+    zrc = inflate( &m_zlib.strm, flush );
     if ( zrc < 0 ) 
     {
       // Something went haywire - bail out.
@@ -1151,7 +1154,7 @@ size_t ON_CompressedBuffer::DeflateHelper( // returns number of bytes written
       // no uncompressed input is left - switch to finish mode
       flush = Z_FINISH;
     }
-    zrc = z_deflate( &m_zlib.strm, flush ); 
+    zrc = deflate( &m_zlib.strm, flush ); 
     if ( zrc < 0 ) 
     {
       // Something went haywire - bail out.
@@ -1284,7 +1287,7 @@ bool ON_CompressedBuffer::InflateHelper(
       // no compressed input is left - switch to finish mode
       flush = Z_FINISH;
     }
-    zrc = z_inflate( &m_zlib.strm, flush );
+    zrc = inflate( &m_zlib.strm, flush );
     if ( zrc < 0 ) 
     {
       // Something went haywire - bail out.
