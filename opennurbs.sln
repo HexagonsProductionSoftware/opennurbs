@@ -8,16 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|Win32 = Debug|Win32
 		Release|x64 = Release|x64
+		Release|Win32 = Release|Win32
 		ReleaseUnoptimized|x64 = ReleaseUnoptimized|x64
+		ReleaseUnoptimized|Win32 = ReleaseUnoptimized|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Debug|x64.ActiveCfg = Debug|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Debug|Win32.ActiveCfg = Debug|Win32
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Debug|x64.Build.0 = Debug|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Debug|Win32.Build.0 = Debug|Win32
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Release|x64.ActiveCfg = Release|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Release|Win32.ActiveCfg = Release|Win32
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Release|x64.Build.0 = Release|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.Release|Win32.Build.0 = Release|Win32
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.ReleaseUnoptimized|x64.ActiveCfg = ReleaseUnoptimized|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.ReleaseUnoptimized|Win32.ActiveCfg = ReleaseUnoptimized|Win32
 		{39172035-CC5F-4140-9118-E1A9AD311FC7}.ReleaseUnoptimized|x64.Build.0 = ReleaseUnoptimized|x64
+		{39172035-CC5F-4140-9118-E1A9AD311FC7}.ReleaseUnoptimized|Win32.Build.0 = ReleaseUnoptimized|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

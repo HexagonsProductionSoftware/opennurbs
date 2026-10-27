@@ -15,7 +15,7 @@
       <SupportJustMyCode>false</SupportJustMyCode>
       <PreprocessorDefinitions>EMK_RELEASE_UNOPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <UseDynamicDebugging>true</UseDynamicDebugging>
+      <UseDynamicDebugging Condition="'$(Platform)'=='x64'">true</UseDynamicDebugging>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <Optimization>MaxSpeed</Optimization>
       <OmitFramePointers>false</OmitFramePointers>
@@ -28,13 +28,13 @@
       <RuntimeChecks>Default</RuntimeChecks>
     </CudaCompile>
     <Link>
-      <UseDynamicDebugging>true</UseDynamicDebugging>
+      <UseDynamicDebugging Condition="'$(Platform)'=='x64'">true</UseDynamicDebugging>
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
     <Lib>
-      <UseDynamicDebugging>true</UseDynamicDebugging>
+      <UseDynamicDebugging Condition="'$(Platform)'=='x64'">true</UseDynamicDebugging>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup />
